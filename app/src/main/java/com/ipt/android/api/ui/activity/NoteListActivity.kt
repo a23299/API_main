@@ -111,10 +111,10 @@ class NoteListActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
     }
 
-    fun addDummyNote() {
+    private fun addDummyNote() {
         val i = Random.nextInt(100)
 
-        val note = Note("Note "+ i, "Descrition " + i )
+        val note = Note("Note $i", "Description $i")
 
         addNote(note) {
             Toast.makeText(this,"Add " + it?.description,Toast.LENGTH_SHORT).show()

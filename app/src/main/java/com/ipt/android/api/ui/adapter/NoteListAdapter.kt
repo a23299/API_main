@@ -12,14 +12,12 @@ import com.ipt.android.api.model.Note
 class NoteListAdapter(private val notes: List<Note>,
                       private val context: Context) : RecyclerView.Adapter<NoteListAdapter.ViewHolder>() {
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val note = notes[position]
         holder?.let {
             it.bindView(note)
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.note_item, parent, false)
@@ -41,7 +39,5 @@ class NoteListAdapter(private val notes: List<Note>,
         }
 
     }
-
-
 
 }

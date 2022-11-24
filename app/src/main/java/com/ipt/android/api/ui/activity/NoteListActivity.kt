@@ -21,11 +21,11 @@ import kotlin.random.Random
 
 class NoteListActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_note_list)
 
+        //buttons
         val buttonAdd: Button = findViewById(R.id.button)
         buttonAdd.setOnClickListener {
             addDummyNote()
@@ -52,6 +52,7 @@ class NoteListActivity : AppCompatActivity() {
         }
     }
 
+    //functions
     private fun listNotes() {
         val call = RetrofitInitializer().noteService().list()
         processList(call)
@@ -89,8 +90,7 @@ class NoteListActivity : AppCompatActivity() {
 
     private fun processList(call: Call<List<Note>>) {
         call.enqueue(object : Callback<List<Note>?> {
-            override fun onResponse(call: Call<List<Note>?>?,
-                                    response: Response<List<Note>?>?) {
+            override fun onResponse(call: Call<List<Note>?>?, response: Response<List<Note>?>?) {
                 response?.body()?.let {
                     val notes: List<Note> = it
                     configureList(notes)

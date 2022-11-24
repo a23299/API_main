@@ -17,16 +17,14 @@ interface NoteService {
     @GET("API/getNotesJWT.php")
     fun listJWT(@Header("Authorization") token: String): Call<List<Note>>
 
-
     @FormUrlEncoded
     @POST("API/loginJWT.php")
-    fun loginJWT(@Field("username") username: String?,
-                @Field("password") password: String?): Call<TokenJWT>
+    fun loginJWT(@Field("username") username: String?, @Field("password") password: String?): Call<TokenJWT>
 
     @FormUrlEncoded
     @POST("API/addNote.php")
-    fun addNote(@Field("title") title: String?,
-                @Field("description") description: String?): Call<APIResult>
+    fun addNote(@Field("title") title: String?, @Field("description") description: String?): Call<APIResult>
+
     //@POST("API/notes")
     //fun addNote(@Body note: Note): Call<APIResult>
 }

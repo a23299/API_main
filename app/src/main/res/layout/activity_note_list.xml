@@ -13,19 +13,22 @@
             android:id="@+id/btnGetNotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get no Auth" />
+            android:text="@string/get_no_auth"
+        />
 
         <Button
             android:id="@+id/btnGetNotesBA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get Basic Auth" />
+            android:text="@string/get_basic_auth"
+        />
 
          <Button
             android:id="@+id/btnGetNotesJWT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get JWT" />
+            android:text="@string/get_jwt"
+         />
 
     </LinearLayout>
 
@@ -38,23 +41,22 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Random Note" />
+            android:text="@string/add_random_note"
+        />
 
         <Button
             android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear" />
-
-
+            android:text="@string/clear"
+        />
 
     </LinearLayout>
-
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/note_list_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+    />
 
 </LinearLayout>
